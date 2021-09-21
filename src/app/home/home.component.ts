@@ -9,6 +9,8 @@ import { PokemonService } from '../service/pokemon.service';
 })
 export class HomeComponent implements OnInit {
   pokemons: any[] = [];
+  pokemonsname: any[] = [] ;
+  listpoke : any = null;
   constructor(private pokemonService: PokemonService,
     private router: Router,
     private route: ActivatedRoute) { }
@@ -44,5 +46,13 @@ findgenders(){
   })
 }
 
+findpokegender(name:string){
+  this.pokemonService.getpokebytype(name).subscribe((resp:any)=>{
+    this.listpoke = resp
+    console.log(this.listpoke.pokemon)
+  })
+}
   
+
+
 }

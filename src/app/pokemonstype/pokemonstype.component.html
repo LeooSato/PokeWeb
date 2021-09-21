@@ -1,0 +1,17 @@
+<div class="container effectcontainer">
+    <p class="display-4 line-1 anim-typewriter justify-content-center">Pokemons by Type</p>
+    <div class="row" >
+      <div class="col" *ngFor="let r of pokemonsname">
+        <div class="card" style="width: auto;">
+          <div class="card-body">
+            <h5 class="card-title">{{r}}</h5>
+            <p class="card-text"></p>
+            <a class="btn btn-primary" [routerLink]="['/pokeview', r]">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ 

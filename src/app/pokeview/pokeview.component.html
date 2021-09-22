@@ -1,1 +1,13 @@
-<p>pokeview works!</p>
+<div class="card" style="width: 18rem;" *ngFor="let pokemons of pokemons">
+    <img [src]="pokemons.sprites.front_default" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{pokemons.name}}</h5>
+      <p class="card-text">{{pokemons.abilities[0].ability.name}}</p>
+      <p>{{pokemons.abilities[2].ability.name}}</p>
+       <p> {{pokemons.abilities[1].ability.name}}</p>
+        
+        
+      
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>

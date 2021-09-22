@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
     //   )})
     // })
   this.findgenders();
-  console.log(this.pokemons)
   }
 
 
@@ -49,7 +48,6 @@ findgenders(){
 findpokegender(name:string){
   this.pokemonService.getpokebytype(name).subscribe((resp:any)=>{
     this.listpoke = resp
-    console.log(this.listpoke.pokemon)
   })
 }
   

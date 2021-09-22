@@ -25,9 +25,10 @@ export class PokemonService {
     return this.http.get(`https://pokeapi.co/api/v2/type/${name}`)
   }
 
-  getPokemon(name:string){
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+  getPokemon(name:string):Observable<any>{
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`)
   }
+
 
   getpokebytype(name:string){
     return this.http.get(`https://pokeapi.co/api/v2/type/${name}`)

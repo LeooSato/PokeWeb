@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { PokemonService } from '../service/pokemon.service';
 
 @Component({
@@ -8,20 +9,28 @@ import { PokemonService } from '../service/pokemon.service';
   styleUrls: ['./pokeview.component.css']
 })
 export class PokeviewComponent implements OnInit {
-  pokemon:any;
+
+
+  pokemons: any[] = [];
+
+
   constructor(private pokemonService: PokemonService,
     private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit(){
     let name = this.route.snapshot.params['name']
-    this.getpokemon(name);
+    this.recebepokemon(name)
   }
 
-  getpokemon(name:string){
-    this.pokemonService.getPokemon(name).subscribe((resp:any)=>{
-      this.pokemon = resp
-      console.log(this.pokemon)
-    })
+  recebepokemon(name:string){
+  this.pokemonService.getPokemon(name).subscribe((resp)=>{
+    this.pokemons.push(resp);
+    console.log(this.pokemons)
+  })
+
   }
+
+
+
 }

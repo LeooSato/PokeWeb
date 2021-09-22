@@ -28,19 +28,8 @@ export class PokemonstypeComponent implements OnInit {
     for(let i=0;i<resp.pokemon.length;i++){
     this.pokemonsname[i] = resp.pokemon[i].pokemon.name;
   }
-  console.log(this.pokemonsname)
   })
   }
-  getpokename(name:string){
-    this.pokemonService.getPokemon(name).subscribe((resp:any)=>{
-        this.poke = resp;
-    })
-  }
 
-  findpokegender(name:string){
-    this.pokemonService.getpokebytype(name).subscribe((resp:any)=>{
-      this.listpoke = resp
-      console.log(this.listpoke.pokemon)
-    })
-  }
+ 
 }

@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'poketype/:name', component:PokemonstypeComponent},
-  {path:'pokeview/:name', component:PokeviewComponent}
+  {path:'pokeview/:name', component:PokeviewComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

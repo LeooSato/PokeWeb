@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .nav-link{
     font-family: 'Poppins', "sans-serif";
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .nav-link:hover{
     
-    color: rgb(67, 141, 226) !important;
+    color: rgb(210, 226, 67) !important;
 }

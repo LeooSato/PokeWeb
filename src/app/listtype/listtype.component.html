@@ -1,0 +1,13 @@
+<p class="display-4 line-1 anim-typewriter justify-content-center">Pokemons by Type</p>
+
+    <div class="row row-md-3" >
+      <div class="col-md-auto mb-3" *ngFor="let r of pokemons">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{r.name}}</h5>
+            <p class="card-text"></p>
+            <a class="btn btn-primary" [routerLink]="['/poketype', r.name]">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>

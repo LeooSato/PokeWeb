@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PokemonService } from '../service/pokemon.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-listtype',
+  templateUrl: './listtype.component.html',
+  styleUrls: ['./listtype.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ListtypeComponent implements OnInit {
   pokemons: any[] = [];
   listpoke : any = null;
   constructor(private pokemonService: PokemonService,
@@ -41,7 +41,7 @@ findtype(){
           this.pokemons.push(uniqresponse);
         })     
       })
-  })
-}
-
-}
+    })
+  }
+  
+  }

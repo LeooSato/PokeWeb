@@ -1,4 +1,4 @@
-<body>
+
 <!-- <div class="container-fluid sizecont pt-5">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -26,22 +26,42 @@
 </div> -->
 
 
-<div class="container effectcontainer">
-    <!-- <p class="display-4 line-1 anim-typewriter justify-content-center">Pokemons by Type</p> -->
-
-    <div class="row row-md-3" >
-      <div class="col-md-auto mb-3" *ngFor="let r of pokemons">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">{{r.name}}</h5>
-            <p class="card-text"></p>
-            <a class="btn btn-primary" [routerLink]="['/poketype', r.name]">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- <div class="container effectcontainer">
+    <!-- 
 
   </div>
 
 
+</body> -->
+<body>
+  
+
+<div class="container pt-5">
+  <div class="row align-items-center">
+    <div class="col">
+      <img src="https://i.imgur.com/bacxtIV.png" style='width:80%;'/>
+    </div>
+    <div class="col">
+        <p class="title">Welcome to PokeWeb</p>
+        <p class="sub-title">Here you will find all the kind of information of pokemons</p>
+    </div>
+  </div>
+</div>
+<div class="container pt-5">
+<div class="row">
+  <div class="col-md-6">
+  <div class="jumbotron">
+    <div class="display-4" >
+      <div class="font">
+      Wanna see pokemons types?
+    </div>
+      <a class="btn btn-warning btn-lg" type="button" [routerLink]="['/listatipo']"> Check it out!</a>
+    </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <img src="https://i.imgur.com/VRqaMS5.png" style="width:50%;">
+  </div>
+</div>
+</div>
 </body>

@@ -10,15 +10,28 @@ import { PokemonService } from '../service/pokemon.service';
 })
 export class NavbarComponent implements OnInit {
 
-  lista = [];
+  pokemons: any[] = [];
+  pokemonsname: any[] = [] ;
+  poke: any;
+  listpoke : any ;
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(){
-   
+   this.findtype();
   }
 
-
+  findtype(){
+    this.pokemonService.FindByGenderPokemon().subscribe((resp:any)=>{
+        resp.results.forEach((result: { name: string; })=>{
+          this.pokemonService.getmorePokemon(result.name).subscribe((uniqresponse:any)=>{
+            this.pokemons.push(uniqresponse);
+          })     
+        })
+    })
+  }
 
 
 }

@@ -1,37 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /* Global */
-
 body{
-  background-image: linear-gradient(to bottom left, rgb(179, 179, 179), rgb(255, 255, 255));
-
+  background-color: black ;
+}
+.img-banner{
+  width:100%;
+  height:auto;
 }
 
-
-.title {
-  text-transform: uppercase;
-  font-family:"Press Start 2P";
-  color: rgb(210, 226, 67);
-  text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
-  Font-Size: 2.5rem;
- }
- .sub-title {
-  font-family: "Press Start 2P";
-  text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
-  color: rgb(210, 226, 67);
-  Font-Size: 1.5rem;
- }
-.font{
-  font-family: "Press Start 2P";
-  text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
-  color: rgb(210, 226, 67);
-  font-size: 1.9rem;
+.T1{
+  padding-top: 1rem;
+  font-family: "Bebas Neue";
+  color: #4F9CAC;
+  font-size: 5rem;
 }
-
-@media (max-width: 768px){
-  body{
-    background-image:rgb(255, 255, 255);
-  }
-  
+.T2{
+  font-family: "Bebas Neue";
+  color: yellow;
+  font-size: 4.5rem;
 }
+.T3{
+  padding-top:3rem;
+  font-family: "Bebas Neue";
+  color: yellow;
+  font-size: 2.3rem;
+}
+.T4{
+  font-family: "Bebas Neue";
+  color: #4F9CAC;
+  font-size: 2.3rem;
+}
+.T4:hover{
+  color: #3a818f;
+  transition: 2s;
+  text-decoration: none;
 
+}
+.bgcolor{
+  background-image: linear-gradient( black, rgb(3, 3, 3))
+}
